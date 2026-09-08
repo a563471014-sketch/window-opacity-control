@@ -1,0 +1,75 @@
+{
+	"name": "window-opacity-control",
+	"displayName": "Window Opacity Control",
+	"description": "使用 Windows API 调整 IDE 窗口透明度。支持所有可见主窗口（本地与 Remote-SSH 窗口同步生效），透明度可独立配置，支持快捷键与状态栏快速调节。",
+	"version": "1.0.0",
+	"publisher": "a563471014-sketch",
+	"icon": "./icon.png",
+	"license": "MIT",
+	"keywords": [
+		"opacity",
+		"transparency",
+		"window",
+		"透明度",
+		"窗口透明"
+	],
+	"engines": {
+		"vscode": "^1.90.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"extensionKind": [
+		"ui"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "windowOpacity.decrease",
+				"title": "降低窗口透明度"
+			},
+			{
+				"command": "windowOpacity.increase",
+				"title": "提高窗口透明度"
+			},
+			{
+				"command": "windowOpacity.set",
+				"title": "设置窗口透明度"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "windowOpacity.decrease",
+				"key": "ctrl+alt+z"
+			},
+			{
+				"command": "windowOpacity.increase",
+				"key": "ctrl+alt+c"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Window Opacity Control",
+			"properties": {
+				"windowOpacity.opacity": {
+					"type": "number",
+					"default": 255,
+					"description": "窗口透明度 (0 ~ 255，255 表示完全不透明)",
+					"maximum": 255,
+					"minimum": 0
+				},
+				"windowOpacity.step": {
+					"type": "number",
+					"default": 5,
+					"description": "每次调整的步长 (1 ~ 255)",
+					"maximum": 255,
+					"minimum": 1
+				}
+			}
+		}
+	}
+}

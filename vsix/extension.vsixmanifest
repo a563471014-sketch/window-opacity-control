@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Language="en-US" Id="window-opacity-control" Version="1.0.0" Publisher="a563471014-sketch"/>
+    <DisplayName>Window Opacity Control</DisplayName>
+    <Description xml:space="preserve">使用 Windows API 调整 IDE 窗口透明度。支持所有可见主窗口（本地与 Remote-SSH 窗口同步生效），透明度可独立配置，支持快捷键与状态栏快速调节。</Description>
+    <Tags>opacity,transparency,window,透明度,窗口透明</Tags>
+    <Categories>Other</Categories>
+    <GalleryFlags>Public</GalleryFlags>
+    <Properties>
+      <Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.90.0"/>
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionKind" Value="ui"/>
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionDependencies" Value=""/>
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionPack" Value=""/>
+      <Property Id="Microsoft.VisualStudio.Code.LocalizedLanguages" Value=""/>
+    </Properties>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Code"/>
+  </Installation>
+  <Dependencies/>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true"/>
+  </Assets>
+</PackageManifest>
