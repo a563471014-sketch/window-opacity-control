@@ -3,6 +3,10 @@
 	"displayName": "Window Opacity Control",
 	"description": "使用 Windows API 调整 IDE 窗口透明度。支持所有可见主窗口（本地与 Remote-SSH 窗口同步生效），透明度可独立配置，支持快捷键与状态栏快速调节。",
 	"version": "1.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/a563471014-sketch/window-opacity-control"
+	},
 	"publisher": "a563471014-sketch",
 	"icon": "./icon.png",
 	"license": "MIT",
