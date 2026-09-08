@@ -9,7 +9,7 @@
 
 ## 效果预览
 
-![效果预览](./extension/preview.png)
+![效果预览](https://raw.githubusercontent.com/a563471014-sketch/window-opacity-control/master/extension/preview.png)
 
 ## 安装
 
