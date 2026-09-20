@@ -7,7 +7,7 @@
 - 透明度 0 ~ 255 独立配置，重启自动恢复
 - 快捷键 + 状态栏快速调节
 
-## 效果预览
+## 效果预览（透明度 200 · 主题 GitHub Dark · 蓝色壁纸）
 
 ![效果预览](https://raw.githubusercontent.com/a563471014-sketch/window-opacity-control/master/extension/preview.png)
 

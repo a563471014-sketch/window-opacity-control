@@ -2,7 +2,7 @@
 
 使用 Windows API 调整 IDE 窗口透明度，让代码窗口半透明，方便对照参考文档或桌面内容。
 
-## 效果预览
+## 效果预览（透明度 200 · 主题 GitHub Dark · 蓝色壁纸）
 
 ![效果预览](https://raw.githubusercontent.com/a563471014-sketch/window-opacity-control/master/extension/preview.png)
 
