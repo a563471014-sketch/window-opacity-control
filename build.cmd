@@ -1,19 +1,15 @@
 @echo off
 rem Window Opacity Control pack: bundle extension -> build vsix -> auto install
 rem NOTE: bump VER together with extension\package.json version
+rem Pack uses pack.ps1 (PowerShell ZipArchive) because tar treats [Content_Types].xml as a glob pattern
 setlocal
 cd /d "%~dp0"
-set VER=1.0.0
+set VER=1.0.1
 
-if not exist vsix mkdir vsix
 if not exist dist mkdir dist
-if exist vsix-build rmdir /s /q vsix-build
-mkdir vsix-build
-xcopy /e /i /y extension vsix-build\extension\ >nul
-copy /Y vsix\[Content_Types].xml vsix-build\ >nul
-copy /Y vsix\extension.vsixmanifest vsix-build\ >nul
-tar --format zip -cf dist\window-opacity-control-%VER%.vsix -C vsix-build [Content_Types].xml extension.vsixmanifest extension
-if exist dist\window-opacity-control-%VER%.vsix (echo OK: dist\window-opacity-control-%VER%.vsix) else (echo vsix failed & exit /b 1)
+powershell -NoProfile -ExecutionPolicy Bypass -File pack.ps1 -Version %VER%
+if errorlevel 1 (echo vsix failed & exit /b 1)
+if not exist dist\window-opacity-control-%VER%.vsix (echo vsix failed & exit /b 1)
 
 rem ---- auto install ----
 where code >nul 2>nul
